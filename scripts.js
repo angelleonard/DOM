@@ -5,6 +5,10 @@ document.addEventListener('DOMContentLoaded', function () {
     document.body.appendChild(button);
     button.addEventListener('click', function (){
         let div = document.createElement("div");
-        document.body.appendChild(div);        
+        div.className = ("boxes")
+        document.body.appendChild(div); 
+        let x = div.childElementCount;
+        console.log(x)
+        let count = document.getElementById('count');    
     })    
 });
