@@ -4,7 +4,8 @@
     border: 5px solid white; 
     background-color: black;
     margin: 0;
-    display: inline-flex;   
+    float: left; 
+    line-height: 100px;  
    
 }
 
