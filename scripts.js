@@ -5,15 +5,20 @@ document.addEventListener('DOMContentLoaded', function () {
     button.append(t);
     document.body.appendChild(button);
     button.style.display = 'block';
-    
+
     let number = 0;
+
+    let container = document.createElement('div');
+    document.body.appendChild(container);
+    container.className = ('main');
+
 
     // Make buttton add boxes
     button.addEventListener('click', function () {
         let div = document.createElement("box");
         div.className = ("boxes")
-        document.body.appendChild(div);
-        
+        container.appendChild(div);
+
         // Add numbers to boxes
         let boxText = document.createTextNode(number);
         div.append(boxText);
@@ -53,7 +58,7 @@ document.addEventListener('DOMContentLoaded', function () {
             if (e.target.nextSibling === null) {
                 alert("There's no next square!");
             } else if (event.target.id % 2 === 0) {
-                document.body.removeChild(event.target.nextSibling);
+                container.removeChild(event.target.nextSibling);
 
 
             }
@@ -63,7 +68,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
             } else if (event.target.id % 2 > 0) {
 
-                document.body.removeChild(event.target.previousSibling);
+                container.removeChild(event.target.previousSibling);
             }
 
         })
